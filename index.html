@@ -7,53 +7,65 @@
     <style>
         body {
             display: flex;
-            flex-direction: column; /* Stack items vertically */
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh; /* Use min-height instead of height */
+            flex-direction: column;
+            justify-content: center; /* Centers vertically */
+            align-items: center;    /* Centers horizontally */
+            min-height: 100vh;
             margin: 0;
             font-family: sans-serif;
-            background-color: #f0f0f0; /* Light gray background */
+            background-color: #f0f0f0;
         }
 
         .container {
             text-align: center;
-            margin-bottom: 20px; /* Space between image and links */
+             /* No need for margin-bottom if using justify-content: center */
+            /* We can optionally add some padding: */
+            padding: 20px;
+            /* Optional: Add a border to visually separate the container */
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            /* We can add margin to create space even with centering.  */
+            margin-bottom: 2rem;
         }
 
         .container a {
             display: block;
             margin-bottom: 1rem;
-            color: #007bff; /* Link color (blue) */
-            text-decoration: none; /* Remove underlines */
+            color: #007bff;
+            text-decoration: none;
         }
-        .container a:hover{
+        .container a:hover {
             text-decoration: underline;
         }
 
         img {
-            max-width: 80%;  /* Responsive: Image will be at most 80% of the viewport width */
-            max-height: 60vh; /* Responsive: Image will be at most 60% of the viewport height */
-            width: auto;     /* Maintain aspect ratio */
-            height: auto;    /* Maintain aspect ratio */
-            margin-bottom: 20px; /* Space between image and links */
-            border: 2px solid #ddd;  /* Subtle border */
-            border-radius: 8px;   /* Rounded corners */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
-
+            max-width: 80%;
+            max-height: 60vh;
+            width: auto;
+            height: auto;
+            margin-bottom: 20px; /* Keep some space between image and links */
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
-        footer{
-            margin-top: auto; /* Pushes footer down */
+
+        footer {
+            /* We now use margin-top to push the footer down *if there's extra space*. */
+            margin-top: auto;
             padding: 10px;
-            font-size:.8rem;
+            font-size: 0.8rem;
+            /* Optional: Style the footer */
+            background-color: #ddd;
+            width: 100%; /* Footer takes full width */
+            text-align: center; /* Center the text inside */
         }
     </style>
 </head>
 <body>
     <div class="container">
+        <img src="exadata-x11m-hc-left.avif" alt="Oracle Exadata Database Machine X11M">
         <a href="https://x.com/ExadataAdm">X Profile</a>
         <a href="https://github.com/ExadataAdm">GitHub Profile</a>
-        <img src="exadata-x11m-hc-left.avif" alt="Oracle Exadata Database Machine X11M">
     </div>
     <footer>
         &copy; 2023 ExadataAdm
